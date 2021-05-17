@@ -1,0 +1,10 @@
+D:\Semester 02\GameFrameWork\GameFrameWork\bin\Debug\GameFrameWork.exe.config
+D:\Semester 02\GameFrameWork\GameFrameWork\bin\Debug\GameFrameWork.exe
+D:\Semester 02\GameFrameWork\GameFrameWork\bin\Debug\GameFrameWork.pdb
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.csprojAssemblyReference.cache
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.Form1.resources
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.Properties.Resources.resources
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.csproj.GenerateResource.cache
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.csproj.CoreCompileInputs.cache
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.exe
+D:\Semester 02\GameFrameWork\GameFrameWork\obj\Debug\GameFrameWork.pdb
