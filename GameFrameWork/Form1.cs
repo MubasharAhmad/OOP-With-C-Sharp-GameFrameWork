@@ -17,24 +17,13 @@ namespace GameFrameWork
             InitializeComponent();
         }
 
-        GameLevel level1 = new GameLevel(5, 5);
+        GameLevel level1 = new GameLevel(5);
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            level1.AddGameObject(player);
-            level1.AddGameObject(pictureBox1);
-            level1.AddGameObject(pictureBox2);
-            level1.AddGameObject(pictureBox3);
-            level1.AddGameObject(pictureBox4);
-            level1.AddGameObject(pictureBox5);
-            level1.AddGameObject(pictureBox6);
-            level1.AddGameObject(pictureBox7);
-            level1.AddGameObject(pictureBox8);
-            level1.AddGameObject(pictureBox9);
-            level1.AddGameObject(pictureBox10);
-            level1.AddGameObject(pictureBox11);
-            level1.AddGameObject(pictureBox12);
-            level1.AddGameObject(pictureBox13);
+            level1.AddGameObject(pictureBox10, 5, GameObjectMotion.LeftRight);
+            level1.AddGameObject(pictureBox12, 6, GameObjectMotion.LeftRight);
+            level1.AddGameObject(pictureBox13, 4, GameObjectMotion.Left);
         }
 
         private void GameMainTimer_Tick(object sender, EventArgs e)

@@ -54,6 +54,11 @@
     </Compile>
     <Compile Include="GameLevel.cs" />
     <Compile Include="GameObject.cs" />
+    <Compile Include="GameObjectMotion.cs" />
+    <Compile Include="GameObjectMovingLeftOnly.cs" />
+    <Compile Include="GameObjectMovingLeftRight.cs" />
+    <Compile Include="GameObjectMovingRightOnly.cs" />
+    <Compile Include="GameObjectTag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

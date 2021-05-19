@@ -3,14 +3,16 @@ using System.Windows.Forms;
 
 namespace GameFrameWork
 {
-    public class GameObject
+    class GameObject
     {
-        public PictureBox PictureBox { get; private set; }
+        public PictureBox PictureBox;
+        public int Speed;
+        public GameObjectMotion ObjectMotion = GameObjectMotion.Static;
 
-        // constructor
-        public GameObject(PictureBox pictureBox)
+
+        public virtual void updatePosition(int gravity)
         {
-            PictureBox = pictureBox;
+
         }
     }
 }

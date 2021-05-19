@@ -88,7 +88,7 @@ namespace GameFrameWork
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::GameFrameWork.Properties.Resources.tile;
-            this.pictureBox2.Location = new System.Drawing.Point(453, 350);
+            this.pictureBox2.Location = new System.Drawing.Point(455, 350);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(373, 25);
             this.pictureBox2.TabIndex = 1;
@@ -175,7 +175,7 @@ namespace GameFrameWork
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::GameFrameWork.Properties.Resources._1;
-            this.player.Location = new System.Drawing.Point(12, 155);
+            this.player.Location = new System.Drawing.Point(12, 381);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(43, 43);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,7 +197,7 @@ namespace GameFrameWork
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::GameFrameWork.Properties.Resources.e1;
-            this.pictureBox10.Location = new System.Drawing.Point(478, 12);
+            this.pictureBox10.Location = new System.Drawing.Point(478, 69);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(44, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,7 +209,7 @@ namespace GameFrameWork
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::GameFrameWork.Properties.Resources.e2;
-            this.pictureBox12.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox12.Location = new System.Drawing.Point(0, 45);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(44, 64);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -221,7 +221,7 @@ namespace GameFrameWork
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::GameFrameWork.Properties.Resources.e3;
-            this.pictureBox13.Location = new System.Drawing.Point(375, 16);
+            this.pictureBox13.Location = new System.Drawing.Point(455, 290);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(41, 60);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
