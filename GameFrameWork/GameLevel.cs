@@ -32,34 +32,30 @@ namespace GameFrameWork
         }
 
 
-        // method to add game objects
-        public void AddGameObject(PictureBox pictureBox, int speed, GameObjectMotion motion)
+
+        public void AddGameObject(PictureBox pictureBox, Movement motion, int speed)
         {
-            switch (motion)
-            {
-                case GameObjectMotion.LeftRight:
-                    GameObject gameObjectMovingLeftRight = new GameObjectMovingLeftRight(pictureBox, speed, motion);
-                    GameObjects.Add(gameObjectMovingLeftRight);
-                    break;
-                case GameObjectMotion.Left:
-                    GameObject gameObjectMovingLeftOnly = new GameObjectMovingLeftOnly(pictureBox, speed, motion);
-                    GameObjects.Add(gameObjectMovingLeftOnly);
-                    break;
-                case GameObjectMotion.Right:
-                    GameObject gameObjectMovingRightOnly = new GameObjectMovingRightOnly(pictureBox, speed, motion);
-                    GameObjects.Add(gameObjectMovingRightOnly);
-                    break;
-                default:
-                    break;
-            }
+            CreateGameObject(pictureBox, motion, speed);
         }
 
-        // method to add motionless objects
-        public void AddGameObject(PictureBox pictureBox)
+
+        // default speed will be equal to the gravity
+        public void AddGameObject(PictureBox pictureBox, Movement motion)
         {
-            GameObject gameObject = new GameObject();
-            gameObject.PictureBox = pictureBox;
-            GameObjects.Add(gameObject);
+            CreateGameObject(pictureBox, motion, Gravity);
+        }
+        
+
+        // default motion will be left Movement
+        public void AddGameObject(PictureBox pictureBox, int speed)
+        {
+            CreateGameObject(pictureBox, CreateMovement.MoveLeft(), speed);
+        }
+
+
+        private void CreateGameObject(PictureBox pictureBox, Movement motion, int speed)
+        {
+            GameObject gameObject = new GameObject(pictureBox, motion, speed);
         }
 
 
@@ -68,38 +64,10 @@ namespace GameFrameWork
         {
             foreach (GameObject gameObject in GameObjects)
             {
-                gameObject.updatePosition(Gravity);
+                gameObject.updatePosition();
             }
         }
 
-
-        // method to check if enemy bounds with ground
-        public static bool IsBoumdsWithGround(PictureBox pictureBox)
-        {
-            foreach (GameObject gameObject in GameObjects)
-            {
-                if(pictureBox.Bounds.IntersectsWith(gameObject.PictureBox.Bounds) && (string)gameObject.PictureBox.Tag == GameObjectTag.Platform)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-
-        // method to get picture box which with enemy / player bounds
-        public static PictureBox GetPictureBox(PictureBox pictureBox)
-        {
-            PictureBox pictureBox1 = null;
-            foreach (GameObject gameObject in GameObjects)
-            {
-                if(pictureBox.Bounds.IntersectsWith(gameObject.PictureBox.Bounds) && (string)gameObject.PictureBox.Tag == GameObjectTag.Platform)
-                {
-                    pictureBox1 = gameObject.PictureBox;
-                }
-            }
-            return pictureBox1;
-        }
 
     }
 }

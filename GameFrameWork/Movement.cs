@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameFrameWork
 {
-    static class GameObjectTag
+    interface Movement
     {
-        public static string Player = "player";
-        public static string Platform = "platform";
+        void update(PictureBox pictureBox, int speed);
     }
 }

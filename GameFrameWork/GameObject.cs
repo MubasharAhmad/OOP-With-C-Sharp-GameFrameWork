@@ -7,12 +7,19 @@ namespace GameFrameWork
     {
         public PictureBox PictureBox;
         public int Speed;
-        public GameObjectMotion ObjectMotion = GameObjectMotion.Static;
+        public Movement ObjectMotion;
 
 
-        public virtual void updatePosition(int gravity)
+        public GameObject(PictureBox pictureBox, Movement motion, int speed)
         {
+            PictureBox = pictureBox;
+            ObjectMotion = motion;
+            Speed = speed;
+        }
 
+        public virtual void updatePosition()
+        {
+            ObjectMotion.update(PictureBox, Speed);
         }
     }
 }

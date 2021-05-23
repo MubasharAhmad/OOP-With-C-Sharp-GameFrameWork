@@ -21,9 +21,9 @@ namespace GameFrameWork
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            level1.AddGameObject(pictureBox10, 5, GameObjectMotion.LeftRight);
-            level1.AddGameObject(pictureBox12, 6, GameObjectMotion.LeftRight);
-            level1.AddGameObject(pictureBox13, 4, GameObjectMotion.Left);
+            level1.AddGameObject(pictureBox10, 5, CreateMovement.MoveLeft());
+            level1.AddGameObject(pictureBox12, 6, CreateMovement.MoveRight());
+            level1.AddGameObject(pictureBox13, 4, CreateMovement.MoveDown());
         }
 
         private void GameMainTimer_Tick(object sender, EventArgs e)
