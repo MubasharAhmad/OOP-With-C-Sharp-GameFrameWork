@@ -8,13 +8,15 @@ namespace GameFrameWork
         public PictureBox PictureBox;
         public int Speed;
         public Movement ObjectMotion;
+        public GameObjectType objectType;
 
 
-        public GameObject(PictureBox pictureBox, Movement motion, int speed)
+        public GameObject(PictureBox pictureBox, Movement motion, int speed, GameObjectType gameObjectType)
         {
             PictureBox = pictureBox;
             ObjectMotion = motion;
             Speed = speed;
+            objectType = gameObjectType;
         }
 
         public virtual void updatePosition()
