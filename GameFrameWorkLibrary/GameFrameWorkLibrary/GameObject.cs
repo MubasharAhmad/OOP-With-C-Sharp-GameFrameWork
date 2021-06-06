@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace GameFrameWorkLibrary
 {
-    class GameObject
+    public class GameObject
     {
         public PictureBox PictureBox;
         public int Speed;
