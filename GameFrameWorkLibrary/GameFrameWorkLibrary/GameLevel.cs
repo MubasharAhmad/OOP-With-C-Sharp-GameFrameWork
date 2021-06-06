@@ -38,12 +38,6 @@ namespace GameFrameWorkLibrary
             GameObjects.Add(gameObject);
         }
 
-        // method for collision detection
-        public void DetectCollision(GameObject object1, GameObject object2)
-        {
-
-        }
-
         // to run game
         public void Update()
         {

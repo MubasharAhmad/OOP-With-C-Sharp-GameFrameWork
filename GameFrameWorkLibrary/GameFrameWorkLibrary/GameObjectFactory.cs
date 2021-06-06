@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace GameFrameWorkLibrary
 {
-    internal class GameObjectFactory
+    public class GameObjectFactory
     {
         const int length = 20;
         // array to keep how much objects have been created of different types
