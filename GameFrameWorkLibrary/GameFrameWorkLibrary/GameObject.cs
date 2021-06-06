@@ -11,15 +11,20 @@ namespace GameFrameWorkLibrary
         public int Speed;
         public IMovement ObjectMotion;
         public GameObjectType objectType;
+        MovementPoolManager movementPoolManager;
 
-
-        internal GameObject(PictureBox pictureBox, IMovement motion, int speed, GameObjectType gameObjectType)
+        // constructor
+        internal GameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
             PictureBox = pictureBox;
-            ObjectMotion = motion;
             Speed = speed;
             objectType = gameObjectType;
+            movementPoolManager = MovementPoolManager.GetMovementPoolManagerInstance();
+            ObjectMotion = movementPoolManager.GetResourse(this.GetType());
         }
+
+        // Destructor
+        ~GameObject() { movementPoolManager.ReleaseResourse(ObjectMotion); }
 
         public virtual void updatePosition()
         {

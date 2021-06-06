@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Semester 02\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
+      "projectUniqueName": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
       "projectName": "GameFrameWorkLibrary",
-      "projectPath": "D:\\Semester 02\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
+      "projectPath": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
       "packagesPath": "C:\\Users\\Student Comptuers\\.nuget\\packages\\",
-      "outputPath": "D:\\Semester 02\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\obj\\",
+      "outputPath": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Setups\\VS studio 2019 Shared\\NuGetPackages"

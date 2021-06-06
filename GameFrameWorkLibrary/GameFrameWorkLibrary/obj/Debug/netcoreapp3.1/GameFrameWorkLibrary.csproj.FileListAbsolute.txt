@@ -6,3 +6,9 @@ D:\Semester 02\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1
 D:\Semester 02\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.csproj.CoreCompileInputs.cache
 D:\Semester 02\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.dll
 D:\Semester 02\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.pdb
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.csprojAssemblyReference.cache
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.AssemblyInfoInputs.cache
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.AssemblyInfo.cs
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.csproj.CoreCompileInputs.cache
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.dll
+D:\Semester 02\GameFrameWork\GameFrameWorkLibrary\GameFrameWorkLibrary\obj\Debug\netcoreapp3.1\GameFrameWorkLibrary.pdb

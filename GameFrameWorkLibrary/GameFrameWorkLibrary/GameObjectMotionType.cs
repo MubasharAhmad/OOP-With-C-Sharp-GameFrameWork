@@ -4,13 +4,14 @@ using System.Text;
 
 namespace GameFrameWorkLibrary
 {
-    public enum GameObjectMotion
+    public enum GameObjectMotionType
     {
         JUMP,
         LEFT,
         RIGHT,
         DOWN,
-        LEFTRIGHT,
+        LEFT_RIGHT,
+        KEYBOARD_INPUT,
         STATIC,
     }
 }

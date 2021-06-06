@@ -8,5 +8,6 @@ namespace GameFrameWorkLibrary
     public interface IMovement
     {
         void update(PictureBox pictureBox, int speed);
+        Type GetMovementType();
     }
 }
