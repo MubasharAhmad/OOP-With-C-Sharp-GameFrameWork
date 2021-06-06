@@ -33,31 +33,31 @@ namespace GameFrameWorkLibrary
 
 
 
-        public void AddGameObject(PictureBox pictureBox, IMovement motion, int speed, GameObjectType gameObjectType)
+        public void AddGameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
-            CreateGameObject(pictureBox, motion, speed, gameObjectType);
+            CreateGameObject(pictureBox, speed, gameObjectType, motion);
         }
 
 
         // default speed will be equal to the gravity
-        public void AddGameObject(PictureBox pictureBox, IMovement motion, GameObjectType gameObjectType)
+        public void AddGameObject(PictureBox pictureBox, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
-            CreateGameObject(pictureBox, motion, Gravity, gameObjectType);
+            CreateGameObject(pictureBox, Gravity, gameObjectType, motion);
         }
 
 
         // default motion will be left Movement
         public void AddGameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType)
         {
-            CreateGameObject(pictureBox, new LeftMovement(), speed, gameObjectType);
+            CreateGameObject(pictureBox, speed, gameObjectType, GameObjectMotionType.LEFT);
         }
 
 
         // method to create game object from CreateGameObject class
-        private void CreateGameObject(PictureBox pictureBox, IMovement motion, int speed, GameObjectType gameObjectType)
+        private void CreateGameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
             GameObjectFactory GetGameObj = GameObjectFactory.GetInstance();
-            GameObject gameObject = GetGameObj.GetGameObject(pictureBox, motion, speed, gameObjectType);
+            GameObject gameObject = GetGameObj.GetGameObject(pictureBox, speed, gameObjectType, motion);
             GameObjects.Add(gameObject);
         }
 

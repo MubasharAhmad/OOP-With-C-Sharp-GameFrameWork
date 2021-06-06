@@ -24,10 +24,10 @@ namespace GameFrameWorkLibrary
         }
 
         // method to create an object
-        public GameObject GetGameObject(PictureBox pictureBox, IMovement motion, int speed, GameObjectType gameObjectType)
+        public GameObject GetGameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
             array[(int)gameObjectType] += 1;
-            GameObject gameObject = new GameObject(pictureBox, motion, speed, gameObjectType);
+            GameObject gameObject = new GameObject(pictureBox, speed, gameObjectType, motion);
             return gameObject;
         }
 
