@@ -1,34 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameFrameWorkLibrary
+namespace Project
 {
-    public class GameObject
+    class GameObject
     {
-        public PictureBox PictureBox;
+        public Tile GameTile;
         public int Speed;
         public IMovement ObjectMotion;
         public GameObjectType objectType;
+        public GameObjectMotionType MotionType;
         MovementPoolManager movementPoolManager;
 
         // constructor
-        internal GameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
+        internal GameObject(Tile GameTile, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
-            PictureBox = pictureBox;
+            GameTile.TileImage.BringToFront();
+            this.GameTile = GameTile;
             Speed = speed;
             objectType = gameObjectType;
+            MotionType = motion;
             movementPoolManager = MovementPoolManager.GetMovementPoolManagerInstance();
-            ObjectMotion = movementPoolManager.GetResourse(this.GetType());
+            ObjectMotion = movementPoolManager.GetResourse(MotionType);
         }
 
         // Destructor
-        ~GameObject() { movementPoolManager.ReleaseResourse(ObjectMotion); }
+        ~GameObject() { movementPoolManager.ReleaseResourse(ObjectMotion, MotionType); }
 
         public virtual void updatePosition()
         {
-            ObjectMotion.update(PictureBox, Speed);
+            ObjectMotion.update(GameTile.TileImage, Speed);
         }
     }
 }

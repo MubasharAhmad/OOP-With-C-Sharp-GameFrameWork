@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameFrameWorkLibrary
+namespace Project
 {
-    public class GameObjectFactory
+    class GameObjectFactory
     {
         const int length = 20;
         // array to keep how much objects have been created of different types
@@ -23,13 +25,23 @@ namespace GameFrameWorkLibrary
             return createGameObject;
         }
 
-        // method to create an object
-        public GameObject GetGameObject(PictureBox pictureBox, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
+        // method to create an GameObject
+        public List<GameObject> GetGameObject(String Name, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
             array[(int)gameObjectType] += 1;
-            GameObject gameObject = new GameObject(pictureBox, speed, gameObjectType, motion);
-            return gameObject;
-        }
 
+            List<GameObject> GameObjects = new List<GameObject>();   
+
+            foreach (Tile tile in WindowManager.Tiles)
+            {
+                if(tile.Name == Name)
+                {
+                    GameObject gameObject = new GameObject(tile, speed, gameObjectType, motion);
+                    GameObjects.Add(gameObject);
+                }
+            }
+
+            return GameObjects;
+        }
     }
 }

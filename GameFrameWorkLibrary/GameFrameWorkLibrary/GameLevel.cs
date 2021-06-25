@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace GameFrameWorkLibrary
+namespace Project
 {
     public class GameLevel
     {
@@ -17,12 +18,11 @@ namespace GameFrameWorkLibrary
         public GameLevel(int gravity)
         {
             Gravity = gravity;
-            GameObjects = null;
         }
 
 
         // method to get instanse
-        public static GameLevel getGameLevelInstance(int gravity)
+        public static GameLevel GetInstance(int gravity)
         {
             if (gameLevel == null)
             {
@@ -33,9 +33,15 @@ namespace GameFrameWorkLibrary
 
 
         // method to add game objects 
-        public void addGameObject(GameObject gameObject)
+        public void addGameObject(String Name, int speed, GameObjectType gameObjectType, GameObjectMotionType motion)
         {
-            GameObjects.Add(gameObject);
+            GameObjectFactory gameObjectFactory = GameObjectFactory.GetInstance();
+            List<GameObject> gameObjects = gameObjectFactory.GetGameObject(Name, speed, gameObjectType, motion);
+
+            foreach (GameObject gameObject in gameObjects)
+            {
+                GameObjects.Add(gameObject);
+            }
         }
 
         // to run game

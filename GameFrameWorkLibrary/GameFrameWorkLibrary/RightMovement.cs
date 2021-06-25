@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameFrameWorkLibrary
+namespace Project
 {
-    public class RightMovement : IMovement
+    class RightMovement : IMovement
     {
         public Type GetMovementType()
         {

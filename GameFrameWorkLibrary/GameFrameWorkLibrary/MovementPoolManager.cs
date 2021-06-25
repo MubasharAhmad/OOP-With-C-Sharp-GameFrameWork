@@ -1,24 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace GameFrameWorkLibrary
+namespace Project
 {
     class MovementPoolManager
     {
-        // list to add available movements
-        List<IMovement> A_Movements = new List<IMovement>();
+        // Dictionary to add available movements
+        Dictionary<GameObjectMotionType, IMovement> A_Movements = new Dictionary<GameObjectMotionType, IMovement>();
 
-        // list to add occupied movements
-        List<IMovement> O_Movements = new List<IMovement>();
+        // Dictionary to add occupied movements
+        Dictionary<GameObjectMotionType, IMovement> O_Movements = new Dictionary<GameObjectMotionType, IMovement>();
 
+        Dictionary<GameObjectMotionType, IMovement> MotionTypes = new Dictionary<GameObjectMotionType, IMovement>() {
+            { GameObjectMotionType.LEFT, new LeftMovement() },
+            { GameObjectMotionType.RIGHT, new RightMovement() },
+            { GameObjectMotionType.DOWN, new FallingMovement() },
+            { GameObjectMotionType.KEYBOARD_INPUT, new KeyboardInputMovement() }};
 
         private static MovementPoolManager movementPoolManagerInstance = null;
 
         // method to get instance of this class
         public static MovementPoolManager GetMovementPoolManagerInstance()
         {
-            if(movementPoolManagerInstance == null)
+            if (movementPoolManagerInstance == null)
             {
                 movementPoolManagerInstance = new MovementPoolManager();
             }
@@ -26,33 +33,41 @@ namespace GameFrameWorkLibrary
         }
 
         // method to get movement
-        public IMovement GetResourse(Type objectType)
+        public IMovement GetResourse(GameObjectMotionType objectType)
         {
-            foreach (IMovement movement1 in A_Movements)
+            IMovement movement;
+            try
             {
-                if(movement1.GetType() == objectType)
+                movement = A_Movements[objectType];
+                if(objectType == GameObjectMotionType.KEYBOARD_INPUT)
                 {
-                    return movement1;
+                    O_Movements.Add(objectType , A_Movements[objectType]);
+                    A_Movements.Remove(objectType);
                 }
+                return movement;
             }
-            IMovement movement = (IMovement)Activator.CreateInstance(objectType);
-            A_Movements.Add(movement);
-            return movement;
+            catch
+            {
+                A_Movements.Add(objectType , MotionTypes[objectType]);
+                return MotionTypes[objectType];
+            }
         }
 
         // method to release movement
-        public void ReleaseResourse(IMovement movement)
+        public void ReleaseResourse(IMovement movement, GameObjectMotionType objectType)
         {
-            bool is_already = false;
-            foreach (IMovement movement1 in A_Movements)
+            if (objectType == GameObjectMotionType.KEYBOARD_INPUT)
             {
-                if(movement == movement1)
+                try
                 {
-                    is_already = true;
+                    A_Movements.Add(objectType, movement);
+                    O_Movements.Remove(objectType);
+                }
+                catch
+                {
+
                 }
             }
-            if(!is_already)
-            A_Movements.Add(movement);
         }
     }
 }
