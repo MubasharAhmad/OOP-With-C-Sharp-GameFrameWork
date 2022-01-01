@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj": {}
+    "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj": {
+    "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
+        "projectUniqueName": "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
         "projectName": "GameFrameWorkLibrary",
-        "projectPath": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
-        "packagesPath": "C:\\Users\\Student Comptuers\\.nuget\\packages\\",
-        "outputPath": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\obj\\",
+        "projectPath": "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
+        "packagesPath": "C:\\Users\\MUBASHAR AHMAD\\.nuget\\packages\\",
+        "outputPath": "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Setups\\VS studio 2019 Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Student Comptuers\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\MUBASHAR AHMAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,6 +49,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -61,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

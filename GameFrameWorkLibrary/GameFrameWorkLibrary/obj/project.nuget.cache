@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gouLaYubykDlXmhh04DrBN6PMnWd3tw7G0wdW6QPfv2mbyKKbPDn2+6xePKw8qrDJlhpBL2ge3jp7YK6w8qRug==",
+  "dgSpecHash": "JhWwPDxFLSygThd2nYREjDFuz/HmKxYyE39mH7f2RU1HB29ZWGbh2Z+WL3/jL1IP57FIx4GKajplksvApnDdlQ==",
   "success": true,
-  "projectFilePath": "D:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Semester 02\\GameFrameWork\\GameFrameWorkLibrary\\GameFrameWorkLibrary\\GameFrameWorkLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MUBASHAR AHMAD\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\MUBASHAR AHMAD\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\MUBASHAR AHMAD\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
